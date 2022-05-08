@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
+    style.
+      * {
+      width: 600px;
+      margin: 0 auto;
+      }
+  body
+    form(action='/addstudent', method='POST')
+      .form-group
+        label(for='exampleInputEmail1') Surname
+        input.form-control(type='text', name='surname', required='')
+      .form-group
+        label(for='exampleInputEmail1') Given name
+        input#exampleInputEmail1.form-control(type='text', aria-describedby='emailHelp', name='givenName', required='')
+      .form-group
+        label(for='exampleInputEmail1') Date of Birth
+        input#exampleInputEmail1.form-control(type='date', aria-describedby='emailHelp', name='dob', required='')
+      .form-check.form-check-inline
+        input#inlineRadio1.form-check-input(type='radio', name='gender', value='male', required='')
+        label.form-check-label(for='inlineRadio1') Male
+      .form-check.form-check-inline
+        input#inlineRadio2.form-check-input(type='radio', name='gender', value='female')
+        label.form-check-label(for='inlineRadio2') Female
+      .form-group
+        label(for='exampleInputPassword1') Place of Residence
+        input#exampleInputPassword1.form-control(type='text', name='place_of_residence')
+      .form-group
+        label(for='exampleInputEmail1') Email
+        input#exampleInputEmail1.form-control(type='text', aria-describedby='emailHelp', name='email', required='')
+      button.btn.btn-primary(type='submit') Submit

@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+    title Document
+  body
+    h3  #{x.surname}
+    h3  #{x.givenName}
+    h3  #{x.gender}
+    h3  #{x.dob}
+    h3  #{x.email}
+    h3  #{x.skills}
+    h3  #{x.project}
+    h3  #{x.tuitionPlan}
+    form(action="/installment" method="POST")
+      h4 StudentID
+      input(type="text" name='studentID' value=`${x._id}`)
+      br
+      h4 TuitionPlan
+      input(type="text" value=`${x.tuitionPlan}` name="tuitionPlan")
+      br
+      h4 Balance
+      input(type="text" value=`${y}`)
+      br
+      h4 Installment Amount
+      input(type="text" value="" name="installmentAmount")
+      br
+      input(type="submit" value="Pay Installment")
